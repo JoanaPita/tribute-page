@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 4fr 4fr 3fr 3fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "candy candy"
+    "nom nom"
+    "yum yum"
+    "footer footer";
+  height: 100vh;
+}
+
+main {
+  grid-area: main;
+  background-color: #fffadf;
+  padding: 0 30px;
+}
+
+section.nom {
+  grid-area: nom;
+  background: url("../los-hermanos2.jpeg") no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+section.yum {
+  grid-area: yum;
+  background-color: #b6da73;
+  padding: 0 20px;
+}
+
+section.diabeetus {
+  grid-area: footer;
+  background-color: #202020;
+  color: beige;
+  padding: 8px 20px;
+  text-align: center;
+}
+
+header {
+  grid-area: header;
+  background-color: #c78898;
+}
+
+h1 {
+  /* filter: drop-shadow(10px 7px 2px #a15b72); */
+  color: #fffadf;
+  padding: 0 20px;
+  font-family: "Dela Gothic One", cursive;
+  letter-spacing: 2px;
+  text-align: center;
+  justify-content: center;
+}
+
+h2 {
+  padding: 0 20px;
+  font-family: "Dela Gothic One", cursive;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.candy {
+  grid-area: candy;
+  background: url("../los-hermanos.jpeg") no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  section.nom {
+    height: 250px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-template-rows: 1fr 7fr 3fr 1fr;
+    grid-template-areas:
+      "main main header"
+      "main main candy"
+      "nom yum candy"
+      "footer footer candy";
+    height: 100vh;
+  }
+  section.diabeetus {
+    padding: 20px 20px;
+  }
+  main {
+    padding-top: 50px;
+  }
+}
