@@ -26,7 +26,7 @@ main {
 
 section.nom {
   grid-area: nom;
-  background: url("../los-hermanos2.jpeg") no-repeat;
+  background: url("los-hermanos2.jpeg") no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
@@ -69,7 +69,7 @@ h2 {
 
 .candy {
   grid-area: candy;
-  background: url("../los-hermanos.jpeg") no-repeat;
+  background: url("los-hermanos.jpeg") no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
