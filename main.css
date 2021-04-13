@@ -11,7 +11,7 @@ body {
   grid-template-areas:
     "header header"
     "main main"
-    "candy candy"
+    "band band"
     "nom nom"
     "yum yum"
     "footer footer";
@@ -37,7 +37,7 @@ section.yum {
   padding: 0 20px;
 }
 
-section.diabeetus {
+section.footer {
   grid-area: footer;
   background-color: #202020;
   color: beige;
@@ -67,8 +67,12 @@ h2 {
   text-align: center;
 }
 
-.candy {
-  grid-area: candy;
+p {
+  font-size: 0.7em;
+}
+
+.band {
+  grid-area: band;
   background: url("los-hermanos.jpeg") no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -80,19 +84,20 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1.5fr;
-    grid-template-rows: 1fr 7fr 3fr 1fr;
+    grid-template-rows: 1fr 7fr 3fr 1fr 1fr;
     grid-template-areas:
       "main main header"
-      "main main candy"
-      "nom yum candy"
-      "footer footer candy";
+      "main main band"
+      "main main yum"
+      "main main yum"
+      "footer footer yum";
     height: 100vh;
   }
-  section.diabeetus {
+  section.footer {
     padding: 20px 20px;
   }
   main {
